@@ -333,16 +333,22 @@ section {
   width: 95%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .js {
-  width: 75%;
+  width: 70%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .react {
-  width: 60%;
+  width: 90%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .node {
-  width: 87%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .python {
   width: 70%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .cnet {
+  width: 60%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .web3 {
+  width: 40%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .mobile {
+  width: 50%;
 }
 
 .stat-title {
@@ -364,17 +370,45 @@ section {
 }
 
 /*Timeline*/
-.timeline {
+/* .timeline {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
   padding-bottom: 3rem;
+} */
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
 }
 .timeline .timeline-item {
+  width: 50%;
+  margin-left: 50%;
   position: relative;
   padding-left: 3rem;
   border-left: 1px solid var(--color-grey-5);
 }
+.timeline .timeline-item-left {
+  width: 50%;
+  position: relative;
+  padding-right: 3rem;
+  border-right: 1px solid var(--color-grey-5);
+}
+
+.timeline .timeline-item-left .tl-icon{
+  position: absolute;
+  right: -27px;
+  top: 0;
+  background-color: var(--color-secondary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .timeline .timeline-item .tl-icon {
   position: absolute;
   left: -27px;
@@ -390,6 +424,20 @@ section {
 .timeline .timeline-item .tl-icon i {
   font-size: 1.3rem;
 }
+.timeline .timeline-item-left .tl-duration {
+  padding: 0.2rem 0.6rem;
+  background-color: var(--color-grey-5);
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+
+}
+.date{
+  margin-top: 15px;
+  text-align: end;
+}
 .timeline .timeline-item .tl-duration {
   padding: 0.2rem 0.6rem;
   background-color: var(--color-grey-5);
@@ -399,18 +447,19 @@ section {
   text-transform: uppercase;
   font-weight: 500;
 }
-.timeline .timeline-item h5 {
+.timeline .timeline-item h5, .timeline .timeline-item-left h5 {
   padding: 1rem 0;
   text-transform: uppercase;
   font-size: 1.3rem;
   font-weight: 600;
 }
-.timeline .timeline-item h5 span {
+
+.timeline .timeline-item h5 span, .timeline .timeline-item-left h5 span  {
   color: var(--color-grey-2);
   font-weight: 500;
   font-size: 1.2rem;
 }
-.timeline .timeline-item p {
+.timeline .timeline-item p, .timeline .timeline-item-left p {
   color: var(--color-grey-2);
 }
 
@@ -431,9 +480,9 @@ section {
 }
 .portfolios .portfolio-item img {
   width: 100%;
-  height: 300px;
+  height: 180px;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .portfolios .portfolio-item .hover-items {
   width: 100%;
@@ -442,7 +491,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  border-radius: 15px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -479,7 +528,7 @@ section {
   margin: 0 1rem;
 }
 .portfolios .portfolio-item .hover-items .icons .icon:hover {
-  background-color: var(--color-white);
+  background-color: var(--color-grey-3);
 }
 .portfolios .portfolio-item .hover-items .icons .icon:hover i {
   color: var(--color-primary);
